@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="title-score">
+        <div class="title">
+          <p>ROCK</p>
+          <p>PAPER</p>
+          <p>SCISSORS</p>
+        </div>
+
+        <div class="score">
+          <div class="computer-score">
+            <p>Computer</p>
+            <p>Score</p>
+            <h1>0</h1>
+          </div>
+          <div class="player-score">
+            <p>Your</p>
+            <p>Score</p>
+            <h1>0</h1>
+          </div>
+        </div>
+      </div>
+      <div class="game-play">
+        <div class="play">
+          <div class="upper-section">
+            <div class="rock">
+              <button>
+                <img
+                  src="./Images/rock.png"
+                  alt="Image not available"
+                  class="action"
+                />
+              </button>
+            </div>
+            <div class="line"></div>
+            <div class="scissors">
+              <button>
+                <img
+                  src="./Images/scissors.png"
+                  alt="Image not available"
+                  class="action"
+                />
+              </button>
+            </div>
+          </div>
+          <div class="lower-section">
+            <div class="left-line"></div>
+            <div class="paper">
+              <button>
+                <img
+                  src="./Images/paper.png"
+                  alt="Image not available"
+                  class="action"
+                />
+              </button>
+            </div>
+            <div class="right-line"></div>
+          </div>
+        </div>
+        <div class="win-screen">
+          <img src="./Images/winner.png" alt="Image not found" >
+          <p style="font-size: 91px;font-weight: 600; color: white; margin-left: 40px;">HURRAY!!</p>
+          <p style="font-size: 41px;font-weight: 600; color: white;margin-left: 40px;">YOU WON THE GAME</p>
+          <button class="playAgain">PLAY AGAIN</button>
+        </div>
+        <div class="rules">
+          <button>X</button>
+          <p>Game Rules</p>
+          <ul>
+            <li>
+              Rock beats scissors,Scissors beats Paper and Paper beats Rock.
+            </li>
+            <li>
+              Agree ahead of time whether you will count off
+              "rock,paper,scissors,shoot" or just "rock,paper,scissors".
+            </li>
+            <li>
+              Use rock,paper,scissors to settle minor decisions or to simply
+              play to pass the time
+            </li>
+            <li>
+              If both players lay down the same hand, each player lays down
+              another hand.
+            </li>
+          </ul>
+        </div>
+       <div class="bottom-buttons">
+         <button class="next" style="display: none;">NEXT</button>
+        <button class="rules-button" >RULES</button>
+       </div>
+      </div>
+    </div>
+    <script src="app.js" defer></script>
+  </body>
+</html>
