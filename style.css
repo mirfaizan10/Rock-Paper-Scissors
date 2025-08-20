@@ -105,9 +105,8 @@ body {
 }
 
 .container .game-play .play .action {
-  height: 50px;
-  width: 50px;
-  border: 0px solid white;
+  height: 52px;
+  width: 52px;  
 }
 
 .container .game-play .play .line {
@@ -254,7 +253,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1;
   position: relative;
 }
 
@@ -294,7 +292,7 @@ body {
   width: 140px;
   height: 140px;
   transform: translate(-50%, -50%);
-  border: 15px solid #1da82b; /* adjust based on winner */
+  border: 15px solid #1da82b;
   border-radius: 50%;
   opacity: 0.6;
   animation: pulse-ring 1.5s ease-out infinite;

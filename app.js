@@ -10,15 +10,12 @@ const nextButton = document.querySelector(".next");
 const winScreen = document.querySelector(".win-screen");
 const titleScore = document.querySelector(".title-score");
 
-// Load scores from localStorage
 let playerScore = parseInt(localStorage.getItem("playerScore")) || 0;
 let computerScore = parseInt(localStorage.getItem("computerScore")) || 0;
 updateScores();
 
-// Game choices
 const choices = ["rock", "paper", "scissors"];
 
-// Add click events to each action image
 buttons.forEach((btn) => {
   btn.addEventListener("click", (e) => {
     const userChoice = getChoiceFromImage(btn.src);
@@ -29,14 +26,12 @@ buttons.forEach((btn) => {
   });
 });
 
-// Extracts the choice from image src
 function getChoiceFromImage(src) {
   if (src.includes("rock")) return "rock";
   if (src.includes("paper")) return "paper";
   if (src.includes("scissors")) return "scissors";
 }
 
-// Game Logic
 function getWinner(player, computer) {
   if (player === computer) return "draw";
   if (
@@ -49,7 +44,6 @@ function getWinner(player, computer) {
   return "computer";
 }
 
-// Update scores, animations, storage
 function updateGame(winner, userChoice, computerChoice) {
   if (winner === "player") {
     playerScore++;
@@ -70,7 +64,6 @@ function updateScores() {
   computerScoreEl.textContent = computerScore;
 }
 
-// Show result screen
 function showResultScreen(userChoice, computerChoice, winner) {
   playArea.innerHTML = "";
 
@@ -133,19 +126,16 @@ function showResultScreen(userChoice, computerChoice, winner) {
   });
 }
 
-// Rules toggle button click
 rulesButton.addEventListener("click", () => {
   rulesPopup.style.display = "block";
   rulesButton.style.display = "none";
 });
 
-// Rules close button click
 closeButton.addEventListener("click", () => {
   rulesPopup.style.display = "none";
   rulesButton.style.display = "block";
 });
 
-//showing winning Image
 nextButton.addEventListener("click", () => {
   winScreen.style.display = "block";
   playArea.style.display = "none";
@@ -154,7 +144,6 @@ nextButton.addEventListener("click", () => {
 
 
  
-//setting game to initial stage
   document.querySelector(".playAgain").addEventListener("click", () => {
     location.reload();
   });
