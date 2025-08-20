@@ -18,13 +18,14 @@ const choices = ["rock", "paper", "scissors"];
 
 buttons.forEach((btn) => {
   btn.addEventListener("click", (e) => {
-    const userChoice = getChoiceFromImage(btn.src);
+    const userChoice = e.target.dataset.choice; 
     const computerChoice = choices[Math.floor(Math.random() * 3)];
     const result = getWinner(userChoice, computerChoice);
 
     updateGame(result, userChoice, computerChoice);
   });
 });
+
 
 function getChoiceFromImage(src) {
   if (src.includes("rock")) return "rock";
